@@ -6,4 +6,7 @@ git up
 
 cd ~/ctvrtek/manageiq
 git up
+
+manageiq-update-forks
+
 bin/update && echo OK || echo FAIL
