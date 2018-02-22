@@ -3,5 +3,5 @@ TERMINAL="open -a Terminal.app"
 
 pg_ctl -D /usr/local/var/postgres start &
 
-$TERMINAL ~/swi-bin/miq-run-manageiq &
-$TERMINAL ~/swi-bin/miq-run-manageiq-ui-classic &
+$TERMINAL ~/ctvrtek/swi-bin/miq-run-manageiq &
+$TERMINAL ~/ctvrtek/swi-bin/miq-run-manageiq-ui-classic &
