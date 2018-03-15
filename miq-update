@@ -1,12 +1,26 @@
 #!/bin/sh
+swi-pg-run
 set -e
 
 cd ~/ctvrtek/manageiq-ui-classic
+# git up
+
+# ovirt network hack
+git checkout app/controllers/application_controller/network.rb
 git up
+miq-network
 
 cd ~/ctvrtek/manageiq
 git up
 
 manageiq-update-forks
+# git up
+
+# ovirt Gemfile hack
+git checkout Gemfile
+git up
+# macosx sed -i *needs* a param, linux can't use empty one
+sed '-i~' -e 's/^  .*ovirt/#&/' Gemfile
+rm 'Gemfile~'
 
 bin/update && echo OK || echo FAIL
