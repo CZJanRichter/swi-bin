@@ -11,10 +11,8 @@ git up
 miq-network
 
 cd ~/ctvrtek/manageiq
-git up
-
-manageiq-update-forks
 # git up
+# manageiq-update-forks
 
 # ovirt Gemfile hack
 git checkout Gemfile
